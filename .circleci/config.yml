@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/openjdk:8u181
+    steps:
+      - checkout
+      - run: mvn test
+workflows:
+  version: 2
+  default:
+    jobs: 
+      - test
+
