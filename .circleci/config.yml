@@ -6,7 +6,6 @@ jobs:
     steps:
       - checkout
       - run: mvn test
-      - run: cat target/surefire*
 workflows:
   version: 2
   default:
