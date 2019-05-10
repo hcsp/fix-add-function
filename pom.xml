@@ -11,13 +11,13 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <repositories>
+    <!-- repositories>
         <repository>
             <id>alimaven</id>
             <name>aliyun maven</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
-    </repositories>
+    </repositories -->
 
     <dependencies>
         <dependency>
