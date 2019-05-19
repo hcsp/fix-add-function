@@ -22,9 +22,6 @@ do
 
     for item in "${WHITELIST[@]}"
     do
-        #echo "whitelistitem: $item"
-        #echo "file: $file"
-
         if endswith "$item" / && beginswith "$file" "$item"; then
             MATCHED=1
             break
