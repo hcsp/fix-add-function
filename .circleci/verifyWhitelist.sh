@@ -1,6 +1,12 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 
-CHANGED_FILES=`git diff --name-only origin/master...HEAD`
+if [ -z "${BASE_REV}" ]; then
+  BASE="origin/master"
+else
+  BASE="${BASE_REV}"
+fi
+
+CHANGED_FILES=`git diff --name-only $BASE...HEAD`
 
 CHANGED_FILE_LIST=($(echo "$CHANGED_FILES" | sed 's/:/ /g'))
 WHITELIST=($(cat .circleci/whitelist.txt | sed 's/:/ /g'))
