@@ -1,13 +1,12 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class SolutionTest {
+public class SolutionTest {
     @Test
     public void addTest() {
-        assertEquals(Solution.add(1, 1), 2);
-        assertEquals(Solution.add(1, 2), 3);
-        assertEquals(Solution.add(-1, 1), 0);
-        assertEquals(Solution.add(Integer.MAX_VALUE, Integer.MIN_VALUE), -1);
+        Assertions.assertEquals(Solution.add(1, 1), 2);
+        Assertions.assertEquals(Solution.add(1, 2), 3);
+        Assertions.assertEquals(Solution.add(-1, 1), 0);
+        Assertions.assertEquals(Solution.add(Integer.MAX_VALUE, Integer.MIN_VALUE), -1);
     }
 }
