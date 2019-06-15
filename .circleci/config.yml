@@ -5,12 +5,18 @@ jobs:
       - image: circleci/openjdk:8u212-jdk-stretch
     steps:
       - checkout
+      - restore_cache:
+          key: hcsp-{{ checksum "pom.xml" }}
       - run:
           name: Verify whitelist
           command: ./.circleci/verifyWhitelist.sh
       - run:
           name: Run Maven tests
           command: mvn clean test
+      - save_cache: # saves the project dependencies
+          paths:
+            - ~/.m2
+          key: hcsp-{{ checksum "pom.xml" }}
 workflows:
   version: 2
   default:
