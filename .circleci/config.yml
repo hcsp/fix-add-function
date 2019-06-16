@@ -13,6 +13,9 @@ jobs:
       - run:
           name: Run Maven tests
           command: mvn clean test
+      - run:
+          name: Wait a while
+          command: sleep 5
       - save_cache: # saves the project dependencies
           paths:
             - ~/.m2
