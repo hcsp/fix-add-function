@@ -8,8 +8,8 @@ fi
 
 CHANGED_FILES=`git diff --name-only $BASE...HEAD`
 
-CHANGED_FILE_LIST=($(echo "$CHANGED_FILES" | sed 's/:/ /g'))
-WHITELIST=($(cat .circleci/whitelist.txt | sed 's/:/ /g'))
+CHANGED_FILE_LIST=($(echo "$CHANGED_FILES" | sed 's/"//g' | sed 's/:/ /g'))
+WHITELIST=($(cat .circleci/whitelist.txt | sed 's/"//g' | sed 's/:/ /g'))
 
 beginswith() { case $1 in "$2"*) true;; *) false;; esac; }
 
