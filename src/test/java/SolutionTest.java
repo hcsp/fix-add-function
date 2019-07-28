@@ -8,5 +8,6 @@ public class SolutionTest {
         Assertions.assertEquals(Solution.add(1, 2), 3);
         Assertions.assertEquals(Solution.add(-1, 1), 0);
         Assertions.assertEquals(Solution.add(Integer.MAX_VALUE, Integer.MIN_VALUE), -1);
+        Assertions.assertEquals(Solution.add(1, 1), 2);
     }
 }
