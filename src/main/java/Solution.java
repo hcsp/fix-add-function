@@ -1,7 +1,9 @@
 package main.java;
 
 public class Solution {
-    public static int add(int a, int b) {
+
+
+    private static int add(int a, int b) {
         return a + b;
     }
 
