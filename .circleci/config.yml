@@ -11,8 +11,8 @@ jobs:
           name: Verify whitelist
           command: ./.circleci/verifyWhitelist.sh
       - run:
-          name: Run Maven tests
-          command: mvn clean test
+          name: Run Maven verify
+          command: mvn clean verify
       - save_cache: # saves the project dependencies
           paths:
             - ~/.m2
