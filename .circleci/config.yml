@@ -12,7 +12,7 @@ jobs:
           command: ./.circleci/verifyWhitelist.sh
       - run:
           name: Run Maven verify
-          command: mvn clean verify
+          command: mvn clean verify -PmavenCentral
       - save_cache: # saves the project dependencies
           paths:
             - ~/.m2
