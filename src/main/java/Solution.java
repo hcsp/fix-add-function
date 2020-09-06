@@ -1,7 +1,6 @@
 public class Solution {
     public static int add(int a, int b) {
-        //把-改成了+
-        return a + b;
+        return a - b;
     }
 
     public static void main(String[] args) {
