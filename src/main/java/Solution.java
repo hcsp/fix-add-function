@@ -4,6 +4,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("不知道再把vpn挂上了有没有用!");
+        System.out.println("不知道再把挂上了有没有用!");
     }
 }
