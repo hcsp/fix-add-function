@@ -4,6 +4,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
+        // add comment
         System.out.println("1+1=" + add(1, 1));
     }
 }
